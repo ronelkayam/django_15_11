@@ -90,8 +90,8 @@ DATABASES = {
         'ENGINE': 'mssql',
         'NAME': os.getenv('SQL_DATABASE'),
         'HOST':os.getenv('SQL_SERVER'),
-        'USER':os.getenv('SQL_USER'),
-        'PASSWORD':os.getenv('SQL_PASSWORD'),
+        'USER':'',
+        'PASSWORD':'',
         'OPTIONS':{
             'driver':'ODBC Driver 17 for SQL Server',
             'encrypt':'no',
