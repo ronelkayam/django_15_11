@@ -31,7 +31,7 @@ class WorkoutPlan(models.Model):
     def __len__(self):
         return self.exercises_count
 
-class MongoWorkouLog(models.Model):
+class MongoWorkoutLog(models.Model):
     trainee_email = models.CharField(max_length=50)
     action = models.CharField(max_length=100)
     plan_name = models.CharField(max_length=100)
