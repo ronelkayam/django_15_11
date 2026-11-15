@@ -30,3 +30,15 @@ class WorkoutPlan(models.Model):
 
     def __len__(self):
         return self.exercises_count
+
+class MongoWorkouLog(models.Model):
+    trainee_email = models.CharField(max_length=50)
+    action = models.CharField(max_length=100)
+    plan_name = models.CharField(max_length=100)
+    status = models.CharField(max_length=50)
+    notes = models.TextField()
+
+    class Meta:#important! said to Django don't create this table at sql server
+        managed=False
+        verbose_name = "MongoDB Workout Log"
+        verbose_name_plural = "MongoDB Workout Logs"
